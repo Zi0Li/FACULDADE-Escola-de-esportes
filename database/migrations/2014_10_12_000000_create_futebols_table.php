@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateNatacaoTable extends Migration
+class CreateFutebolsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,14 +13,14 @@ class CreateNatacaoTable extends Migration
      */
     public function up()
     {
-        Schema::create('natacao', function (Blueprint $table) {
+        Schema::create('futebols', function (Blueprint $table) {
             $table->id();
             $table->string('name');
             $table->string('rg');
             $table->string('cpf');
             $table->string('data_nasc');
-            $table->string('sabe_nadar');
-            $table->string('modalidade');
+            $table->string('perna_dominante');
+            $table->string('posicao');
         });
     }
 
@@ -31,6 +31,6 @@ class CreateNatacaoTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('natacao');
+        Schema::dropIfExists('futebols');
     }
 }

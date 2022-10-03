@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateBasqueteTable extends Migration
+class CreateVoleisTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,7 @@ class CreateBasqueteTable extends Migration
      */
     public function up()
     {
-        Schema::create('basquete', function (Blueprint $table) {
+        Schema::create('voleis', function (Blueprint $table) {
             $table->id();
             $table->string('name');
             $table->string('rg');
@@ -21,7 +21,6 @@ class CreateBasqueteTable extends Migration
             $table->string('data_nasc');
             $table->string('peso');
             $table->string('altura');
-            $table->string('posicao');
         });
     }
 
@@ -32,6 +31,6 @@ class CreateBasqueteTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('natacao');
+        Schema::dropIfExists('voleis');
     }
 }

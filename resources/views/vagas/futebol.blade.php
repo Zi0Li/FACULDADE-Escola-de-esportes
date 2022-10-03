@@ -26,15 +26,19 @@
         <h1 class="blue-grey lighten-1 center-align">ESPORTES</h1>
         <table class="striped">
             <th>Nome</th>
-            <th>Vagas</th>
+            <th>Nascimento</th>
+            <th>Posição jogada</th>
+            <th>Perna dominante</th>
             <th></th>
-            @foreach ($vagas as $vaga)
+            @foreach ($futeboll as $futebol)
                 <tr>
-                    <td>{{$vaga->esporte}}</td>
-                    <td>{{$vaga->vaga}}</td>
+                    <td>{{$futebol->name}}</td>
+                    <td>{{$futebol->data_nasc}}</td>
+                    <td>{{$futebol->posicao}}</td>
+                    <td>{{$futebol->perna_dominante}}</td>
                     <td>
-                        <a class="waves-effect waves-light btn" href="{{ route('vagas.show', $vaga->id) }}">Matricula-se</a>
-                        <a class="btn-floating btn-small waves-effect waves-light orange" href="{{ route('vagas.show', $vaga->id) }}">
+                        <a class="waves-effect waves-light btn" href="#">Matricula-se</a>
+                        <a class="btn-floating btn-small waves-effect waves-light orange" href="#">
                             <i class="material-icons">remove_red_eye</i>
                         </a>
                         <a class="btn-floating btn-small waves-effect waves-light red" onclick  ="JavaScript:location.href='#'">
