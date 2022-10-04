@@ -13,4 +13,6 @@ class Vaga extends Model
         'esporte',
         'vaga',
     ];
+
+    public $timestamps = false;
 }

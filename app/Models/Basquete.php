@@ -18,4 +18,7 @@ class Basquete extends Model
         'altura',
         'posicao',
     ];
+
+    public $timestamps = false;
+    
 }

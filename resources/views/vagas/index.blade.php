@@ -33,12 +33,11 @@
                     <td>{{$vaga->esporte}}</td>
                     <td>{{$vaga->vaga}}</td>
                     <td>
-                        <a class="waves-effect waves-light btn" href="{{ route('vagas.show', $vaga->id) }}">Matricula-se</a>
+                        @if ($vaga->vaga != 0)
+                            <a class="waves-effect waves-light btn" href="{{ route('vagas.create', $vaga->id) }}">Matricula-se</a>
+                        @endif        
                         <a class="btn-floating btn-small waves-effect waves-light orange" href="{{ route('vagas.show', $vaga->id) }}">
                             <i class="material-icons">remove_red_eye</i>
-                        </a>
-                        <a class="btn-floating btn-small waves-effect waves-light red" onclick  ="JavaScript:location.href='#'">
-                            <i class="material-icons">clear</i>
                         </a>
                     </td>
                 </tr>

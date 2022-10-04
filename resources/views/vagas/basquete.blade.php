@@ -17,13 +17,13 @@
 
     <!--Let browser know website is optimized for mobile-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Futebol</title>
+    <title>Basquete</title>
 </head>
 
 <body>
 
     <div class="container ">
-        <h1 class="green center-align">FUTEBOL</h1>
+        <h1 class="red darken-4 center-align">BASQUETE</h1>
         <table class="striped">
             <th>
                 <a class="btn-floating btn-small waves-effect waves-light grey darken-3" href="{{ route('vagas.index')}}">
@@ -31,16 +31,18 @@
             </th>
             <th>Nome</th>
             <th>Nascimento</th>
-            <th>Posição jogada</th>
-            <th>Perna dominante</th>
+            <th>Peso</th>
+            <th>Altura</th>
+            <th>Posição</th>
             <th></th>
-            @foreach ($futeboll as $futebol)
+            @foreach ($basquetee as $basquete)
                 <tr>
                     <td></td>
-                    <td>{{$futebol->name}}</td>
-                    <td>{{$futebol->data_nasc}}</td>
-                    <td>{{$futebol->posicao}}</td>
-                    <td>{{$futebol->perna_dominante}}</td>
+                    <td>{{$basquete->name}}</td>
+                    <td>{{$basquete->data_nasc}}</td>
+                    <td>{{$basquete->peso}}</td>
+                    <td>{{$basquete->altura}}</td>
+                    <td>{{$basquete->posicao}}</td>
                     <td>
                         <a class="btn-floating btn-small waves-effect waves-light blue" href="#">
                             <i class="material-icons">edit</i>

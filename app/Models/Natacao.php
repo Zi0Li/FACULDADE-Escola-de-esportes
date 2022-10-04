@@ -17,4 +17,7 @@ class Natacao extends Model
         'sabe_nadar',
         'modalidade',
     ];
+
+    public $timestamps = false;
+    
 }

@@ -17,4 +17,7 @@ class Volei extends Model
         'peso',
         'altura',
     ];
+
+    public $timestamps = false;
+
 }
