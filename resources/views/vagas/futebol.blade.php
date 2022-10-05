@@ -42,12 +42,16 @@
                     <td>{{$futebol->posicao}}</td>
                     <td>{{$futebol->perna_dominante}}</td>
                     <td>
-                        <a class="btn-floating btn-small waves-effect waves-light blue" href="#">
-                            <i class="material-icons">edit</i>
-                        </a>
-                        <a class="btn-floating btn-small waves-effect waves-light red" onclick  ="JavaScript:location.href='#'">
-                            <i class="material-icons">clear</i>
-                        </a>
+                        <form action="{{route('vagas.deleteFutebol', $futebol->id)}}" method="POST">
+                            @method('DELETE')
+                            @csrf
+                            <a class="btn-floating btn-small waves-effect waves-light blue" href="{{ route('vagas.editFutebol', $futebol->id)}}">
+                                <i class="material-icons">edit</i>
+                            </a>
+                            <button type="submit" class="btn-floating btn-small waves-effect waves-light red">
+                                <i class="material-icons">clear</i>
+                            </button>
+                        </form>
                     </td>
                 </tr>
             @endforeach    

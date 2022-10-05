@@ -34,7 +34,10 @@
                     <td>{{$vaga->vaga}}</td>
                     <td>
                         @if ($vaga->vaga != 0)
-                            <a class="waves-effect waves-light btn" href="{{ route('vagas.create', $vaga->id) }}">Matricula-se</a>
+                            <a class="waves-effect waves-light green accent-3 btn" href="{{ route('vagas.create', $vaga->id) }}">Matricula-se</a>
+                    
+                        @else <a class="waves-effect waves-light red darken-4 btn">Esgotado</a>    
+
                         @endif        
                         <a class="btn-floating btn-small waves-effect waves-light orange" href="{{ route('vagas.show', $vaga->id) }}">
                             <i class="material-icons">remove_red_eye</i>

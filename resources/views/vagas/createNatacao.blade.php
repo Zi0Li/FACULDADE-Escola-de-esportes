@@ -12,14 +12,14 @@
 <body>
     <div class="container">
         <div class="form-image">
-            <img src="assets/img//cad_produto.png" alt="">
+            <img src="/img/natação.webp" alt="">
         </div>
         <div class="form">
             <form action="{{route('vagas.storeNatacao')}}" method="POST">
                 @csrf
                 <div class="form-header">
                     <div class="title">
-                        <h1>Matricula - Natacao</h1>
+                        <h1>Matricula - Natacão</h1>
                         <div class="login-button">
                             <a href="{{ route('vagas.index') }}"><button type="button">Cancelar</button></a>  
                         </div>

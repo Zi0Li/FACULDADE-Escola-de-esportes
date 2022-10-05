@@ -12,7 +12,7 @@
 <body>
     <div class="container">
         <div class="form-image">
-            <img src="assets/img//cad_produto.png" alt="">
+            <img src="/img/basquete.jpg" alt="">
         </div>
         <div class="form">
             <form action="{{route('vagas.storeBasquete')}}" method="POST">
